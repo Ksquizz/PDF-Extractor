@@ -1,0 +1,15 @@
+venv/
+
+__pychace__/
+*.py[cod]
+
+.vscode/
+
+
+build/
+dist/
+*.exe
+*.spec
+
+*.log
+*.tmp
