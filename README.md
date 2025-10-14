@@ -1,81 +1,149 @@
-Hey! 
+# PDF Scraper Tool (v1.0.0)
 
-Thank you for installing some important information is listed below:
+Hey!
 
-=== Preambles ===
+Thank you for installing, some important information is listed below please read before using, so you don't get lost! Or do it's part of the fun!:
 
-This tool is a WIP this is the V1.0.0 release. You may encounter some bugs and glitches - if you do please reach out to me and I can revise it for the next version
-I am working on this tool in the background so updates may be slow but if they are urgent, I will fix ASAP.
-I am planning on updating the tool to include OCR detection so it's more usable across other older PDF types.
+---
 
-== What is this tool for? ==
+## 📑 Table of Contents
+- [Preambles](#-preambles)
+- [What Is This Tool For?](#-what-is-this-tool-for)
+- [How to Use the Tool](#-how-to-use-the-tool)
+  - [Loading PDFs](#-loading-a-pdf-or-pdfs)
+  - [Scraping Tools](#-scraping-tools)
+- [Important Note](#-important-note)
+- [Upcoming Updates](#-upcoming-updates-in-order-of-priority)
+- [Later Updates](#-later-updates)
+- [Requirements](#-requirements)
+- [Developer](#-developer)
 
-The primary focus of this tool is to cut that damn manual task of interpreting information off a PDF. In my role I have to look at tons of PDF's take values/info from them and compile them, typically in excel. So, this tool helps cut down the manual-ness of it.
+---
 
-When booting the app up for the first time, it may take a moment to build the libraries and initiate the script so please be patient.
+## ⚙️ Preambles
 
-== How to use the tool == 
+> **Note:** This tool is a **Work in Progress (WIP)** — Current release = `V1.0.0`.
 
- -- Loading a PDF or PDF's --
+You may encounter some bugs or glitches — if you do, please **reach out** to me and I can revise them for the next version.
 
-    To import PDF(s) please find the "PDF manager" at the top ribbon. Open it and click "import PDF". This will allow you to select the PDF(s) in a folder and import them to the tool.
+- I’m working on this tool in the background, so updates may be slow.  
+- If issues are urgent/tool-breaking, I’ll fix them ASAP.  
+- I’m planning to update the tool to include **OCR detection** so it’s more usable across older PDF types.
 
-    Following this the selected PDF's can be seen in the window below the "Selected PDFs" window.
+---
 
-    Double click or select a PDF to show it in your main UI. You're now ready to scrape!!
+## 📘 What Is This Tool For?
 
--- Scraping Tools --
+The primary focus of this tool is to **eliminate the manual task** of extracting and interpreting information from PDFs.  
 
-    There are currently only two scraping tools (this is set to change in upcoming updates)
-    Below is a description of they work
+In my role, I often have to look at tons of PDFs, take values/info from them, and compile them in Excel.  
+This tool helps cut down the manual effort of that process.
 
-        IMPORTANT!!
+> When booting the app for the first time, it may take a moment to build the libraries and initialize the script — please be patient!
 
-    What the programme sees and what text/values are selectable is visible on the right next to the Export Order - hover over a word in a PDF to check out what it can see.
+---
 
-     --- "Word Selector" ---
-     TLDR: Select a certain word or value.
+## 🧭 How to Use the Tool
 
-        Certainly, needs a rename (thanks future me)!
-        Example Application: This tool can select a certain word on a PDF e.g "The Boy Ran Away" = I want to select "Ran" so I click on ran and the rest of the sentence is ignored.
+### 📂 Loading a PDF or PDFs
 
-    --- "Box Selector" --- 
-        TLDR: Select a whole sentence or an area where values/words may appear to limit exclusion error.
+1. Open the **“PDF Manager”** at the top ribbon.  
+2. Click **“Import PDF”**, this allows you to select one or more PDFs from a folder.  
+3. The selected PDFs will appear in the window below **“Selected PDFs.”**  
+4. Double-click or select a PDF to show it in the main UI.  
+5. You’re now ready to scrape!
 
-        This is the main tool (the tool I use most). Use it for long form sentences or values that can vary in place of a PDF to select a total area to scan.
+---
 
-        BE CAREFUL not to accidentally highlight another sentence/value as it can pick it up and mess with your results
+### 🧰 Scraping Tools
 
-        Example Application: If you have a sentence and the tool cuts it off e.g "The Boy Ran away" using the "Word Selector Tool" I can only select "Ran" :'(). If I want to select the whole sentence, I can use the "Box Selector" to drag and draw a box around my area to extract the whole sentence!
+There are currently two scraping tools (more coming soon!).  
+Below is a description of how they work:
 
-    --- "Resize Mode" ---
-        TLDR: Resize a drawn "Box Selector" area.
+#### ⚠️ Important
+What the program sees and what text/values are selectable, is visible on the right next to the **Export Order**.  
+Hover over a word in a PDF to check what the tool can “see.”
 
-        Example Application: If I have accidentally drawn the box in the wrong place or it does not fit the area, I want it to scan I can select this tool using the green corner points to reshape it!
+---
 
-== Important Note == 
-    Do not rely on this tool to scrape really really important data, it can make mistakes and you should always check the output as it can miss things and make errors
+#### ✏️ Word Selector
+**TL;DR:** Select a specific word or value.
 
-=== Upcoming Updates in order of priority ===
+Example:  
+If a PDF contains the sentence **“The Boy Ran Away”** and you only want the word **“Ran,”** click it — the rest of the sentence will be ignored.
 
-What you can expect in the next few updates..:
+---
 
--Work in an option to fit all PDF's to the exact same place that the main PDF is in as auto tool/application to all PDF's button (have an option to move one PDF to align with the boxes) or crop PDF's and option to apply to all or just one.
--Have the option to individually update the box areas on any specific PDF.
--Have an option to delete all items in the export order.
--Have an option to choose what page you want to select from (gives a quick preview pane so you can easily identify). Still sticking to 1 page max.
--Fix the resize option so it only appears when selecting the resize option and everything else disappears if you click off it.
--Fix the accuracy of the extraction, giving an option for easy QA - similar to what we already have need to build off it.
--Create a loading bar when exporting due to it seeming like it just freezes
--Change the wording of the buttons to something clearer as it's rather confusing
--Produce a new tab with the exported results from the programme have the option to save as excel or txt or copy to clipboard depending on usage
+#### 🧱 Box Selector
+**TL;DR:** Select a full sentence or area to reduce exclusion errors.
 
-=== Later Updates (once above are fixed): ===
+⚠️ Be careful not to accidentally include extra text, as it may affect your results.
 
--Make the UI more pretty and easier to use (move away from tkinter base models).
--Upgrade to implement OCR and try the best to make it accurate at exporting and reading data (should be good when fixing the PDF alignment/cropping).
--Maybe implement a fallback option if the data doesn't look right (jumple of letter and numbers) give an option to turn this off or give an advanced filtering option e.g if something has a unique ID which may be confused
+Example:  
+If you want a sentence like *“The Boy Ran away”* instead of just the word "Ran", when using the Word Selector, this is the tool for you. Instead use the **Box Selector** to draw a box around the whole sentence for full extraction.
 
-Anyways enough waffling... please enjoy.
+---
 
-Developer/Creator - Ksquizz
+#### 🔲 Resize Mode
+**TL;DR:** Resize a drawn **Box Selector** area.
+
+Example:  
+If the box is misplaced or too small, select **Resize Mode** and use the green corner points to reshape it.
+
+---
+
+## ❗ Important Note
+
+Do **not** rely on this tool for scraping highly sensitive or critical data.  
+It can make mistakes — always check the output, as it may miss or misinterpret information.
+
+---
+
+## 🚀 Upcoming Updates (in order of priority)
+
+Here’s what you can expect in future updates:
+
+- Add an option to align all PDFs to the same position as the main PDF (auto-apply to all or single).  
+- Allow individual box area updates on any PDF.  
+- Add a feature to delete all items in the export order.  
+- Add a quick preview pane for choosing which page to select from (still limited to one page max).  
+- Fix resize mode visibility (only appears when selected).  
+- Improve extraction accuracy and build better QA options.  
+- Add a **loading bar** when exporting (to avoid looking like it froze).  
+- Simplify and clarify button wording.  
+- Add a new tab for exported results with options to:
+  - Save as `.xlsx`
+  - Save as `.txt`
+  - Copy to clipboard
+
+---
+
+## 🧩 Later Updates
+
+These will come after the above improvements:
+
+- Improve the UI (move away from Tkinter-based models).  
+- Implement OCR for better data reading and exporting.  
+- Add an **advanced filtering or fallback option** when data looks incorrect (e.g., garbled letters/numbers).
+
+---
+
+## 📦 Requirements
+
+If you are a dev looking to adapt or use the tool. Use the `requirements.txt` file from the source code and run:
+
+`pip install -r requirements.txt`
+
+Failing that run:
+
+`pip install PyMuPDF tkinter pandas openpyxl pillow`
+
+---
+
+## Developer
+
+**Created and Designed By:** [Ksquizz] (https://github.com/Ksquizz)
+
+If you have feedback or find a bug, please open and **issue** at: (https://github.com/Ksquizz/PDF-Extractor/issues)
+
+*Like this project, feel free to leave it a star!!* ⭐
