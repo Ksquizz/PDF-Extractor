@@ -22,7 +22,6 @@ from config.settings import *
 
 print("Initialising PDFExtractor")
 
-
 class PDFExtractionApp:
     """Main application class."""
     
@@ -30,6 +29,16 @@ class PDFExtractionApp:
         self.root = tk.Tk()
         self.root.title("PDF Extraction Tool - Enhanced")
         self.root.geometry("1400x800")
+
+        try:
+            icon_path = os.path.join(project_dir, "assets, icon.ico")
+            if os.path.exists(icon_path):
+                self.root.iconbitmap(icon_path)
+            else:
+                print(f"Warning: icon not found at {icon_path}")
+        except Exception as e:
+                print(f"Could not set window icon: {e}")
+
         
         # Core components
         self.coord_transformer = CoordinateTransformer()
